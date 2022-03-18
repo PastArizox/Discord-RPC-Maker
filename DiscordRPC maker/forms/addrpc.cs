@@ -82,6 +82,18 @@ namespace DiscordRPC_maker.Forms
             WindowState = FormWindowState.Minimized;
         }
 
+        private void button1_checkbox_CheckedChanged(object sender, EventArgs e)
+        {
+            button1_text_textbox.Enabled = !button1_text_textbox.Enabled;
+            button1_link_textbox.Enabled = !button1_link_textbox.Enabled;
+        }
+
+        private void button2_checkbox_CheckedChanged(object sender, EventArgs e)
+        {
+            button2_text_textbox.Enabled = !button2_text_textbox.Enabled;
+            button2_link_textbox.Enabled = !button2_link_textbox.Enabled;
+        }
+
 
 
 
