@@ -26,6 +26,15 @@ namespace DiscordRPC_maker.Forms
             InitializeComponent();
         }
 
+        private void InitFolder()
+        {
+            if (!Directory.Exists(utils.GetDefaultDirectory()))
+                Directory.CreateDirectory(utils.GetDefaultDirectory());
+
+            if (!Directory.Exists($@"{utils.GetDefaultDirectory()}\applications"))
+                Directory.CreateDirectory($@"{utils.GetDefaultDirectory()}\applications");
+        }
+
         private Param InitSettings()
         {
             Param newSettings = new Param();
@@ -114,6 +123,7 @@ namespace DiscordRPC_maker.Forms
 
         public void loader_Load(object sender, EventArgs e)
         {
+            InitFolder();
             settings = InitSettings();
             RunSettings();
             apps_container_panel.Controls.Clear();
