@@ -133,6 +133,12 @@ namespace DiscordRPC_maker.Forms
             Y = Control.MousePosition.Y - this.Location.Y;
         }
 
+        private void addrpc_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            loader loaderform = (loader)Owner;
+            loaderform.loader_Load(sender, e);
+        }
+
         private void main_title_label_MouseMove(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
